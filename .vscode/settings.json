@@ -1,0 +1,5 @@
+{
+	"emmet.triggerExpansionOnTab": true,
+	"git.supportCancellation": true,
+	"git.showPushSuccessNotification": true
+}
