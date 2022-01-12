@@ -1,6 +1,7 @@
-import Expenses from './components/Expenses'
+import Expenses from './components/Expenses/Expenses'
+import NewExpense from './components/NewExpense/NewExpense'
 
-function App() {
+const App = () => {
 	const expenses = [
 		{
 			id: 'e1',
@@ -28,12 +29,20 @@ function App() {
 		},
 	]
 
+	const addExpenseHandler = (expense) => {
+		console.log('In App.js')
+		console.log(expense)
+	}
+
+	const selectYearHandler = (year) => {
+		console.log(year)
+	}
+
 	return (
 		<div>
-			<h2>Let's get started!</h2>
-			<Expenses items={expenses} />
+			<NewExpense onAddExpense={addExpenseHandler} />
+			<Expenses items={expenses} onSelectedYear={selectYearHandler} />
 		</div>
 	)
 }
-
 export default App
